@@ -1,0 +1,5 @@
+{
+  "name": "IELTS Listening Audio Generator",
+  "description": "An application to generate and download audio for IELTS listening practice scripts using Gemini's text-to-speech capabilities.",
+  "requestFramePermissions": []
+}
