@@ -42,11 +42,11 @@ const parseGenders = (genderString: string): string[] => {
 
 
 export const generateSpeech = async (script: string, options: SpeechOptions): Promise<string | null> => {
-  // It's assumed that process.env.API_KEY is configured in the environment.
-  if (!process.env.API_KEY) {
-    throw new Error("API key not found. Please set the API_KEY environment variable.");
+  // It's assumed that process.env.GEMINI_API_KEY is configured in the environment.
+  if (!process.env.GEMINI_API_KEY) {
+    throw new Error("API key not found. Please set the GEMINI_API_KEY environment variable.");
   }
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
   const { numVoices, voiceGenders, accent } = options;
 
   const fullScript = accent ? `Please read the following with an ${accent} accent: \n\n${script}` : script;
